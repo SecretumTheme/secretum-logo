@@ -5,7 +5,7 @@ namespace SecretumLogo;
  * Plugin Name: Secretum Logo Shortcode
  * Plugin URI: https://github.com/SecretumTheme/secretum-logo
  * Description: The Secretum Logo plugin provides a customizable shortcode for displaying the website logo managed in the WordPress customizer.
- * Version: 0.0.1
+ * Version: 0.0.2
  * License: GNU GPLv3
  * Copyright (c) 2018 Secretum Theme
  * Author: Secretum Theme
@@ -54,3 +54,13 @@ add_action('customize_register', '\SecretumLogo\Functions\customize');
 
 // Inject Links Into Plugin.php Admin
 add_filter('plugin_row_meta', '\SecretumLogo\Functions\links', 10, 2);
+
+// Secretum Updater Plugin
+if (file_exists(WP_PLUGIN_DIR . '/secretum-updater/puc/plugin-update-checker.php')) {
+    include_once(WP_PLUGIN_DIR . '/secretum-updater/puc/plugin-update-checker.php');
+    $secretum_hf_updater = \Puc_v4_Factory::buildUpdateChecker(
+        'https://raw.githubusercontent.com/SecretumTheme/secretum-logo/master/updates.json',
+        SECRETUM_LOGO_PLUGIN_FILE,
+        'secretum-logo'
+    );
+}

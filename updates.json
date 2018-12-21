@@ -1,0 +1,8 @@
+{
+	"name" : "Secretum Logo Shortcode",
+	"version" : "0.0.2",
+	"download_url" : "https://github.com/SecretumTheme/secretum-logo/archive/0.0.2.zip",
+	"sections" : {
+		"description" : "The Secretum Logo plugin provides a customizable shortcode for displaying the website logo managed in the WordPress customizer."
+	}
+}

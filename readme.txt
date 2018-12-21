@@ -4,8 +4,8 @@ Contributors: SecretumTheme
 Tags: 
 Requires at least: 4.6
 Requires PHP: 5.6
-Tested up to: 5.0
-Stable tag: 0.0.1
+Tested up to: 5.0.2
+Stable tag: 0.0.2
 License: GNU GPLv3
 License URI: https://github.com/SecretumTheme/secretum-logo/blob/master/LICENSE
 
